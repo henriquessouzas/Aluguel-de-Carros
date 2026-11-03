@@ -21,10 +21,18 @@ export default function Navbar() {
           </>
         )}
         {user?.role === 'CLIENTE' && (
-          <Link to="/perfil">Meu Perfil</Link>
+          <>
+            <Link to="/perfil">Meu Perfil</Link>
+            <Link to="/pedidos">Meus Pedidos</Link>
+            <Link to="/automoveis">Automóveis</Link>
+          </>
         )}
         {user?.role === 'AGENTE' && (
-          <Link to="/clientes">Clientes</Link>
+          <>
+            <Link to="/automoveis">Automóveis</Link>
+            <Link to="/clientes">Clientes</Link>
+            <Link to="/analise">Análise de Pedidos</Link>
+          </>
         )}
         {user && (
           <button onClick={handleLogout} className="btn-link">Sair</button>

@@ -185,3 +185,124 @@ button:disabled { opacity: .6; cursor: not-allowed; }
 /* ── Feedback ── */
 .error  { color: var(--error-color);   font-size: .875rem; }
 .success { color: var(--success-color); font-size: .875rem; }
+
+/* ── Page container ── */
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.page-header h2 { font-size: 1.25rem; }
+
+.text-muted { color: var(--text-muted); font-size: .9rem; }
+
+/* ── Table ── */
+.table-wrapper { overflow-x: auto; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .875rem;
+}
+.table th, .table td {
+  padding: .65rem .9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.table th { font-weight: 600; background: var(--bg); }
+.table tbody tr:hover { background: #f9fafb; }
+.table .actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+
+/* ── Badges ── */
+.badge {
+  display: inline-block;
+  padding: .2rem .6rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.badge-analise  { background: #fef3c7; color: #92400e; }
+.badge-aprovado { background: #d1fae5; color: #065f46; }
+.badge-reprovado { background: #fee2e2; color: #991b1b; }
+.badge-cancelado { background: #f3f4f6; color: #374151; }
+.badge-contratado { background: #dbeafe; color: #1e40af; }
+
+/* ── Filter bar ── */
+.filter-bar {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+.btn-filter {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: .3rem .85rem;
+  font-size: .8rem;
+  border-radius: 999px;
+}
+.btn-filter:hover { background: var(--bg); }
+.btn-filter.active { border-color: var(--primary); background: #eff6ff; color: var(--primary); }
+
+/* ── Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+.modal {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0,0,0,.2);
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.modal-header h3 { font-size: 1rem; }
+.modal-close { color: var(--text-muted) !important; font-size: 1rem; }
+.modal-body { padding: 1.5rem; }
+
+/* ── Textarea ── */
+.form textarea {
+  padding: .5rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: .9rem;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+}
+.form textarea:focus { border-color: var(--primary); }
+
+/* ── Select ── */
+.form select {
+  padding: .5rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: .9rem;
+  background: var(--card-bg);
+  outline: none;
+}
+.form select:focus { border-color: var(--primary); }

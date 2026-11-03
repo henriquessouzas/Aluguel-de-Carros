@@ -49,6 +49,9 @@ public class PedidoAluguel {
     @Column(columnDefinition = "TEXT")
     private String parecerFinanceiro;
 
+    @Column(columnDefinition = "TEXT")
+    private String observacoes;
+
     @ManyToOne
     @JoinColumn(name = "agente_id")
     private Agente agenteResponsavel;

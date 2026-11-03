@@ -27,6 +27,12 @@ public class GlobalExceptionHandler {
                 .body(ErrorResponse.of(400, "Bad Request", ex.getMessage()));
     }
 
+    @ExceptionHandler(StatusTransitionException.class)
+    public ResponseEntity<ErrorResponse> handleStatusTransition(StatusTransitionException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(ErrorResponse.of(409, "Conflict", ex.getMessage()));
+    }
+
     @ExceptionHandler(UnauthorizedException.class)
     public ResponseEntity<ErrorResponse> handleUnauthorized(UnauthorizedException ex) {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED)

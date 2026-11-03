@@ -29,12 +29,4 @@ public class Rendimento {
     @Positive
     @Column(nullable = false)
     private BigDecimal valor;
-
-    @PrePersist
-    @PreUpdate
-    private void validarLimite() {
-        if (cliente != null && cliente.getRendimentos().size() > 3) {
-            throw new IllegalStateException("Cliente não pode ter mais de 3 rendimentos.");
-        }
-    }
 }

@@ -1,0 +1,19 @@
+# Variáveis de ambiente (nunca versionar)
+.env
+
+# Maven
+backend/target/
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
